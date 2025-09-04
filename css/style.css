@@ -630,9 +630,8 @@ pre .copy-to-clipboard {
 }
 .form-group .form-control:focus {
   outline: 0;
-  border-color: #ffffff;   /* يخلي البوردر أبيض */
-  box-shadow: 0 0 5px #ffffff; /* يعمل لمعة بيضاء حواليه */
-  color: #ffffff; /* النص اللي بتكتبه يبقى أبيض */
+  border-color: #8f8f8f;
+  box-shadow: none;
 }
 .form-group .custom-select {
   font-size: 13px;
