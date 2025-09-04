@@ -42,7 +42,7 @@
       <div class="col-lg-8">
         <div class="p-5 shadow rounded content">
           <h2 class="section-title" style="color: #ffffff;">Contact Me Now!</h2>
-          <form action="https://formspree.io/f/movnpjob" method="POST" class="contact-form">
+          <form action="https://formspree.io/f/movnpjob" method="POST">
   <div class="form-group">
     <label for="name" style="color: #f9ffff;">Name</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
@@ -50,6 +50,7 @@
 
   <div class="form-group">
     <label for="email" style="color: #f9ffff;">Email</label>
+    <!-- خليك فاكر هنا لازم يكون name="_replyto" -->
     <input type="email" class="form-control" id="email" name="_replyto" placeholder="Your Email Address" required>
   </div>
 
@@ -58,8 +59,10 @@
     <textarea name="message" id="message" class="form-control" rows="5" placeholder="Write your message..." required></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary">Send</button>
+  <!-- زرار الإرسال -->
+  <button type="submit" class="btn btn-primary btn-block">Send</button>
 </form>
+
 
         </div>
       </div>
