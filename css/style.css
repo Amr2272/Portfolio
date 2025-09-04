@@ -630,8 +630,8 @@ pre .copy-to-clipboard {
 }
 .form-group .form-control:focus {
   outline: 0;
-  border-color: #8f8f8f;
-  box-shadow: none;
+  border-color: rgb(170, 165, 165);   /* اللون الجديد */
+  box-shadow: 0 0 5px #a3aab0; /* ظل خفيف حواليه */
 }
 .form-group .custom-select {
   font-size: 13px;
