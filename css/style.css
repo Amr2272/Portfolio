@@ -8,6 +8,14 @@ body {
   color: #333;
 }
 
+.skills .card:hover{
+  box-shadow: 0px 0px 30px #ffd700 !important;
+}
+.skills .cardorange:hover{
+  box-shadow: 0px 0px 30px #4169e1 !important;
+}
+
+
 h2{
   color: white !important;
 }
