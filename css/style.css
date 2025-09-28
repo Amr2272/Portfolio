@@ -948,8 +948,8 @@ html {
 
 .about-img img {
   border-radius: 50%;
-  width: 400px;
-  height: 370px;
+  width: 400px !important;
+  height: 370px !important;
   object-fit: cover;
   border: 6px solid #8f8f8f;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
