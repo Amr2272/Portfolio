@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,21 +12,26 @@
 </head>
 <body>
 
-<header class="sticky-top navigation" style="background-color: #f1f1f1;">
+<header class="sticky-top navigation">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand" href="index.html"><h3 class="amrLogo" style="color: #2a1b13 !important;">3MR</h3></a>
+      <a class="navbar-brand" href="index.html"><h3 class="amrLogo" style="color: var(--text-primary) !important;">3MR</h3></a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="ti-align-right h4 text-dark"></i></button>
+        <i class="ti-align-right h4" style="color: var(--text-secondary);"></i></button>
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav mx-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
         </ul>
         <a href="cv/Amr-Ashraf CV.pdf" class="btn btn-sm btn-outline-primary ml-lg-4">My CV</a>
-        <a href="contact.html" class="btn btn-sm btn-primary ml-lg-4" style="background-color: #858585;">Contact</a>
+        <a href="contact.html" class="btn btn-sm btn-primary ml-lg-4">Contact</a>
+        <button class="theme-toggle ml-lg-3" id="themeToggle" aria-label="Toggle theme">
+          <i class="ti-shine"></i><i class="ti-na"></i>
+        </button>
       </div>
     </nav>
   </div>
@@ -36,14 +41,14 @@
   <div class="container">
     <div class="row justify-content-between align-items-center">
       <div class="col-lg-7 text-center text-lg-left">
-        <h1 class="mb-4 hero-title" style="color: #ffffff;">
+        <h1 class="mb-4 hero-title" style="color: var(--text-primary);">
           <span id="typed-text" class="typing"></span>
         </h1>
-        <form class="search-wrapper" action="#">
-          <input id="search-by" name="s" type="search" class="form-control form-control-lg"
-            placeholder="Send me a message ..." style="background-color: #f1f1f1;">
-          <button type="submit" class="btn btn-primary">Send</button>
-        </form>
+        <div class="search-wrapper">
+          <input id="search-by" name="s" type="text" class="form-control form-control-lg"
+            placeholder="Send me a message ..." readonly>
+          <a href="contact.html" class="btn btn-primary">Send</a>
+        </div>
       </div>
       <div class="col-lg-4 d-lg-block d-none about-img" style="border-radius: 50%;">
         <img src="images/WhatsApp Image 2025-08-30 at 9.58.40 PM.jpeg" style="border-radius: 50%; object-fit: cover;" alt="illustration" class="img-fluid">
@@ -55,16 +60,40 @@
 
 <section id="about" class="section reveal mt-5">
   <div class="container">
-    <h2 class="section-title" style="color: #858585;">About Me</h2>
+    <h2 class="section-title" style="color: var(--text-heading);">About Me</h2>
     <div class="row align-items-center">
       
       <div class="col-md-7">
         <div class="about-text">
-          <h3 style="color: #858585;">Hi, I'm Amr Ashraf</h3>
-          <p style="color: #f9ffff;">
-             <strong>B.Sc. Student in Computer Science & Statistics - Helwan University</strong>  with a growing passion for data science. Currently training at DEPI, where I’m building real-world data projects using <strong>Python and SQL</strong>. I'm particularly interested in turning raw data into meaningful insights and visualizations. Always looking for opportunities to learn, grow, and contribute to data-driven teams.
-          </p>
-          <a href="#projects" class="btn btn-primary mt-2">View My Projects</a>
+          <p class="about-greeting">Hi, I'm</p>
+          <h3>Amr Ashraf</h3>
+          <p class="about-role">AI Engineer & Data Scientist</p>
+          <p class="about-intro">I design intelligent systems that turn complex data into real-world impact.</p>
+
+          <ul class="about-highlights">
+            <li>
+              <i class="ti-settings"></i>
+              <span>Building end-to-end <strong>ML &amp; Deep Learning pipelines</strong> &#x2014; from data wrangling to production deployment.</span>
+            </li>
+            <li>
+              <i class="ti-pencil-alt"></i>
+              <span>Skilled in <strong>Python, SQL, TensorFlow &amp; Scikit-Learn</strong> with expertise in NLP, Computer Vision &amp; Predictive Analytics.</span>
+            </li>
+            <li>
+              <i class="ti-loop"></i>
+              <span>Leveraging <strong>MLOps</strong> (MLflow, DVC, Experiment Tracking) for reproducible, production-ready AI solutions.</span>
+            </li>
+          </ul>
+
+          <div class="about-edu-box">
+            <i class="ti-bookmark-alt"></i>
+            <div>
+              <strong>B.Sc. Computer Science &amp; Statistics</strong>
+              <span>Helwan University &ensp;|&ensp; CGPA: 3.733 &ensp;|&ensp; 2023 &#x2013; 2027</span>
+            </div>
+          </div>
+
+          <a href="#projects" class="btn btn-primary mt-4">View My Projects</a>
         </div>
       </div>
       
@@ -73,132 +102,355 @@
 </section>
 
 
-<section class="section pb-0 reveal skills">
+<section class="section pb-0 reveal skills" id="skills">
   <div class="container">
-    <h2 class="section-title text-center mb-5" id="skills" style="color: #333;">My Skills</h2>
-    <div class="row">
+    <h2 class="section-title text-center mb-2" style="color: var(--text-heading);">My Skills</h2>
+    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Technologies and competencies I bring to every project</p>
 
-      <div class="col-lg-6 col-md-12 pr-lg-5 border-right">
-        <h3 class="text-uppercase mb-4" style="color: #c2c2c2; border-left: 5px solid #ffd700; padding-left: 10px;">
-          Technical Skills
-        </h3>
-        <div class="card mb-4 shadow-sm border-0">
-          <div class="card-body text-center">
-            <i class="card-icon ti-panel mb-3" style="font-size: 2rem; color:#ffd700;"></i>
-            <h4 class="card-title h5" style="color: #333;">Programming & Analysis</h4>
-            <p class="card-text">Data Structures & Algorithms, SQL, Python (Golden Badge on HackerRank), and Statistical Analysis.</p>
-          </div>
-        </div>
-        <div class="card mb-4 shadow-sm border-0">
-          <div class="card-body text-center">
-            <i class="card-icon ti-package mb-3" style="font-size: 2rem; color:#ffd700;"></i>
-            <h4 class="card-title h5" style="color: #333;">Problem Solving</h4>
-            <p class="card-text">Solved 60+ challenges on HackerRank, showcasing logical and analytical thinking.</p>
+    <!-- Technical Skills -->
+    <h3 class="text-uppercase mb-4" style="color: var(--text-secondary); border-left: 5px solid #00d4ff; padding-left: 12px; font-size: 1.1rem; letter-spacing: 2px;">
+      Technical Skills
+    </h3>
+    <div class="row mb-5">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card h-100 shadow-sm border-0">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap mb-3">
+              <i class="ti-panel" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">Programming & Databases</h4>
+            <div class="skill-tags">
+              <span class="badge-skill">Python</span>
+              <span class="badge-skill">SQL</span>
+              <span class="badge-skill">Shell Scripting</span>
+              <span class="badge-skill">REST APIs</span>
+              <span class="badge-skill">Git & GitHub</span>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-6 col-md-12 pl-lg-5">
-        <h3 class="text-uppercase mb-4" style="color: #c2c2c2; border-left: 5px solid #4169e1; padding-left: 10px;">
-          Soft Skills
-        </h3>
-        <div class="card mb-4 shadow-sm border-0 cardorange">
-          <div class="card-body text-center">
-            <i class="card-icon ti-credit-card mb-3" style="font-size: 2rem; color:#4169e1;"></i>
-            <h4 class="card-title h5" style="color: #333;">Leadership</h4>
-            <p class="card-text">Strong interpersonal skills and ability to lead teams towards achieving goals.</p>
-          </div>
-        </div>
-        <div class="card mb-4 shadow-sm border-0 cardorange">
-          <div class="card-body text-center">
-            <i class="card-icon ti-settings mb-3" style="font-size: 2rem; color:#4169e1;"></i>
-            <h4 class="card-title h5" style="color: #333;">Communication</h4>
-            <p class="card-text">Clear and effective communication skills in both technical and collaborative settings.</p>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card h-100 shadow-sm border-0">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap mb-3">
+              <i class="ti-stats-up" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">AI & Machine Learning</h4>
+            <div class="skill-tags">
+              <span class="badge-skill">Deep Learning</span>
+              <span class="badge-skill">NLP</span>
+              <span class="badge-skill">Computer Vision</span>
+              <span class="badge-skill">Time Series</span>
+              <span class="badge-skill">Feature Engineering</span>
+              <span class="badge-skill">Model Optimization</span>
+            </div>
           </div>
         </div>
       </div>
-
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card h-100 shadow-sm border-0">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap mb-3">
+              <i class="ti-package" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">Frameworks & Libraries</h4>
+            <div class="skill-tags">
+              <span class="badge-skill">TensorFlow</span>
+              <span class="badge-skill">PyTorch</span>
+              <span class="badge-skill">Scikit-Learn</span>
+              <span class="badge-skill">LangChain</span>
+              <span class="badge-skill">Pandas</span>
+              <span class="badge-skill">Streamlit</span>
+              <span class="badge-skill">OpenCV</span>
+              <span class="badge-skill">LightGBM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card h-100 shadow-sm border-0">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap mb-3">
+              <i class="ti-loop" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">MLOps & Deployment</h4>
+            <div class="skill-tags">
+              <span class="badge-skill">MLflow</span>
+              <span class="badge-skill">DVC</span>
+              <span class="badge-skill">Docker</span>
+              <span class="badge-skill">CI/CD</span>
+              <span class="badge-skill">Model Monitoring</span>
+              <span class="badge-skill">Experiment Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Soft Skills -->
+    <h3 class="text-uppercase mb-4" style="color: var(--text-secondary); border-left: 5px solid #a855f7; padding-left: 12px; font-size: 1.1rem; letter-spacing: 2px;">
+      Soft Skills
+    </h3>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap-blue mb-3">
+              <i class="ti-light-bulb" style="font-size: 1.6rem; color:#a855f7;"></i>
+            </div>
+            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Analytical Thinking</h4>
+            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Systematic problem decomposition and data-driven reasoning — 60+ HackerRank challenges solved.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap-blue mb-3">
+              <i class="ti-comments" style="font-size: 1.6rem; color:#a855f7;"></i>
+            </div>
+            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Technical Communication</h4>
+            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Translating complex AI/ML concepts into clear insights for technical and non-technical stakeholders.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap-blue mb-3">
+              <i class="ti-user" style="font-size: 1.6rem; color:#a855f7;"></i>
+            </div>
+            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Cross-Functional Collaboration</h4>
+            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Working alongside developers, analysts, and domain experts in agile, project-driven environments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
+          <div class="card-body text-center d-flex flex-column align-items-center">
+            <div class="skill-icon-wrap-blue mb-3">
+              <i class="ti-timer" style="font-size: 1.6rem; color:#a855f7;"></i>
+            </div>
+            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Self-Driven & Adaptable</h4>
+            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Fast learner who independently researches emerging AI tools, frameworks, and best practices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="projects" class="section pb-0 reveal">
   <div class="container">
-    <h2 class="section-title" style="color: #858585;">Projects</h2>
+    <h2 class="section-title" style="color: var(--text-heading);">Projects</h2>
+    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Hands-on work showcasing real-world AI & engineering solutions</p>
     <div class="row">
       
-      <div class="col-md-4 mb-4 mx-auto">
-        <div class="project-card h-100">
-          <div class="project-img">
-            <img src="images/1752539822553.jpg" alt="Shopping Cart">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Gui Calculator</h4>
-            <p class="project-text">Dynamic calculator built with Python and Tkinter.</p>
-            <a href="https://github.com/Amr2272/My_Trials_project.git" class="btn btn-sm btn-outline-primary">View</a>
-          </div>
-        </div>
-      </div>
-<!--  Project 2-->
-    <div class="col-md-4 mb-4 mx-auto">
+      <!-- Project 1: Store Sales Forecasting -->
+      <div class="col-md-4 mb-4">
         <div class="project-card h-100">
           <div class="project-img">
             <img src="images/pr2.jpg" alt="Store Sales Forecasting">
           </div>
           <div class="project-body">
-            <h4 class="project-title">Store Sales Forecasting</h4>
-            <p class="project-text">Project about Store Sales Foercasting</p>
-            <a href="https://github.com/Amr2272/Final-Project" class="btn btn-sm btn-outline-primary mt-4">View</a>
+            <h4 class="project-title">Store Sales – Time Series Forecasting</h4>
+            <p class="project-text">End-to-end grocery sales forecasting for Corporación Favorita (Kaggle). Built preprocessing pipelines, multi-model system (Prophet, ARIMA, LightGBM), Streamlit dashboards, and MLOps with DVC & MLflow.</p>
+            <div class="project-tags mb-3">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">DVC</span>
+              <span class="project-tag">MLflow</span>
+            </div>
+            <a href="https://github.com/Amr2272/Final-Project" class="btn btn-sm project-btn">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Cairo Real Estate Pricing -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <div class="project-img">
+            <img src="images/7136281-528e5o.jpg" alt="Cairo Real Estate Pricing">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Cairo Real Estate Pricing</h4>
+            <p class="project-text">Streamlit app to predict real estate prices in Cairo. Performed EDA and feature engineering on housing data; applied gradient boosting for accurate price estimation.</p>
+            <div class="project-tags mb-3">
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">Scikit-Learn</span>
+              <span class="project-tag">Gradient Boosting</span>
+            </div>
+            <a href="https://github.com/Amr2272/Cairo-Real-Estate-Pricing" class="btn btn-sm project-btn">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Tiny Debian Live -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <div class="project-img">
+            <img src="images/powered_by_linux_classic_round_sticker.jpg" alt="Tiny Debian Live">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Tiny Debian Live – Mini Linux OS</h4>
+            <p class="project-text">Lightweight, live-boot Linux distribution based on Debian 12 with XFCE desktop, persistence, and network support.</p>
+            <div class="project-tags mb-3">
+              <span class="project-tag">Shell Scripting</span>
+              <span class="project-tag">Linux Kernel</span>
+              <span class="project-tag">System Programming</span>
+            </div>
+            <a href="https://github.com/Amr2272/Mini-Linux-OS" class="btn btn-sm project-btn">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+<!-- Experience Section -->
+<section id="experience" class="section pb-0 reveal">
+  <div class="container">
+    <h2 class="section-title" style="color: var(--text-heading);">Experience</h2>
+    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Professional journey and key contributions</p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Timeline -->
+        <div class="exp-timeline">
+          <div class="exp-timeline-item">
+            <div class="exp-timeline-dot"></div>
+            <div class="exp-timeline-content">
+              <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
+                <div>
+                  <h4 class="mb-0" style="color: var(--text-heading); font-size: 1.25rem;">AI Engineer & Data Scientist Intern</h4>
+                  <p class="mb-0" style="color: #00d4ff; font-weight: 600;">Digital Egypt Pioneers Initiative (DEPI)</p>
+                  <p class="mb-0" style="color: var(--text-muted); font-size: 0.9rem;">Cairo, Egypt</p>
+                </div>
+                <span class="exp-date-badge">Jun 2025 – Dec 2025</span>
+              </div>
+              <hr style="border-color: var(--border-subtle); margin: 12px 0;">
+              <ul class="exp-list">
+                <li>
+                  <strong>End-to-End ML Pipelines</strong> — Designed and deployed full pipelines from data ingestion, feature engineering, model training and evaluation, to production-grade deployment.
+                </li>
+                <li>
+                  <strong>Data Engineering</strong> — Engineered automated ETL workflows in Python & SQL, improving data reliability and reducing manual preparation time across multiple project datasets.
+                </li>
+                <li>
+                  <strong>Analytical Dashboards</strong> — Built interactive dashboards with Streamlit and Matplotlib/Seaborn, enabling stakeholders to explore KPIs and drive data-driven decisions.
+                </li>
+                <li>
+                  <strong>Model Development</strong> — Developed and fine-tuned supervised & unsupervised models (LightGBM, Prophet, Scikit-Learn) for forecasting, classification, and clustering tasks.
+                </li>
+                <li>
+                  <strong>MLOps & Reproducibility</strong> — Implemented experiment tracking, model versioning, and reproducible research workflows using MLflow and DVC.
+                </li>
+                <li>
+                  <strong>Agile Collaboration</strong> — Contributed to code reviews, sprint planning, and technical documentation within a cross-functional team of engineers and analysts.
+                </li>
+              </ul>
+              <div class="exp-tech-tags mt-3">
+                <span class="exp-tag">Python</span>
+                <span class="exp-tag">SQL</span>
+                <span class="exp-tag">TensorFlow</span>
+                <span class="exp-tag">Scikit-Learn</span>
+                <span class="exp-tag">LightGBM</span>
+                <span class="exp-tag">Streamlit</span>
+                <span class="exp-tag">MLflow</span>
+                <span class="exp-tag">DVC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Timeline -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="section pb-0 reveal">
+  <div class="container">
+    <h2 class="section-title" style="color: var(--text-heading);">Certificates</h2>
+    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Professional certifications and completed programs</p>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card cert-card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="cert-icon-wrap mx-auto mb-3">
+              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h5 style="color: var(--text-heading);">Machine Learning with Python</h5>
+            <p class="cert-issuer">IBM – Coursera</p>
+            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Supervised & unsupervised learning, regression, classification, and clustering using Scikit-Learn, SciPy, and NumPy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card cert-card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="cert-icon-wrap mx-auto mb-3">
+              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h5 style="color: var(--text-heading);">Certified Data Scientist</h5>
+            <p class="cert-issuer">DEPI</p>
+            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Intensive training covering data analysis, Python, SQL, and machine learning with hands-on real-world projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card cert-card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="cert-icon-wrap mx-auto mb-3">
+              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h5 style="color: var(--text-heading);">Python Programming Basics</h5>
+            <p class="cert-issuer">Mahara Tech</p>
+            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Python fundamentals including data types, control flow, functions, and basic problem-solving.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card cert-card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="cert-icon-wrap mx-auto mb-3">
+              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h5 style="color: var(--text-heading);">SQL Certificate</h5>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Practical experience in SQL queries, data retrieval, filtering, aggregation, and joins.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card cert-card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="cert-icon-wrap mx-auto mb-3">
+              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+            </div>
+            <h5 style="color: var(--text-heading);">Python (Basic)</h5>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Validated core Python proficiency through timed algorithmic challenges.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  
-<section id="services" class="section pb-0 reveal">
-  <div class="container">
-    <h2 class="section-title" style="color: #858585;">Services</h2>
-    <div class="row">
 
-      <!-- Service 1 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card match-height h-100">
-          <div class="card-body text-center">
-            <i class="fas fa-database fa-3x mb-4" style="color: #28a745;"></i>
-            <h4 class="card-title h4" style="color: #858585;">Data Analysis</h4>
-            <p class="card-text">
-              Cleaning, processing, and visualizing data using Python and Pandas.
-            </p>
-            <a href="list.html" class="stretched-link"></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card match-height h-100">
-          <div class="card-body text-center">
-            <i class="fas fa-brain fa-3x mb-4" style="color: #ffc107;"></i>
-            <h4 class="card-title h4" style="color: #858585;">Machine Learning</h4>
-            <p class="card-text">
-              Building predictive models and intelligent systems with scikit-learn and TensorFlow.
-            </p>
-            <a href="list.html" class="stretched-link"></a>
-          </div>
-        </div>
-      </div>
-      </div>
-  </div>
-</section>
-
-<section class="section reveal">
+<section class="section reveal cta-section">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-4 text-center d-lg-block d-none">
         <img src="images/12982910_5124556.jpg" class="img-fluid" style="border-radius: 10px;" alt="">
       </div>
       <div class="col-lg-8 text-lg-left text-center">
-        <h2 class="mb-3" style="color: #858585;">Let’s Build Something Together!</h2>
-        <p style="color: #f9ffff;">If you have a project idea, internship, or collaboration in mind, feel free to reach out. I’m always excited to connect and explore new opportunities.</p>
+        <h2 class="mb-3">Let's Build Something Together!</h2>
+        <p>If you have a project idea, internship, or collaboration in mind, feel free to reach out. I'm always excited to connect and explore new opportunities.</p>
         <a href="contact.html" class="btn btn-primary">Contact Me</a>
       </div>
     </div>
@@ -210,14 +462,14 @@
     <div class="row align-items-center border-bottom py-5">
       <div class="col-lg-4">
         <ul class="list-inline footer-menu text-center text-lg-left">
-          <li class="list-inline-item"><a style="color: #f9ffff;" href="https://www.linkedin.com/in/amr-ashraf-/">LinkedIn</a></li>
-          <li class="list-inline-item"><a style="color: #f9ffff;" href="https://github.com/Amr2272">GitHub</a></li>
-          <li class="list-inline-item"><a style="color: #f9ffff;" href="contact.html">Contact</a></li>
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/amr-ashraf-/">LinkedIn</a></li>
+          <li class="list-inline-item"><a href="https://github.com/Amr2272">GitHub</a></li>
+          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-4 text-center mb-4 mb-lg-0">
         <a class="navbar-brand" href="index.html">
-          <h3 class="amrLogo2" style="color: #f9ffff;">3MR</h3>
+          <h3 class="amrLogo2" style="color: var(--text-primary);">3MR</h3>
         </a>
       </div>
       <div class="col-lg-4">
@@ -252,7 +504,7 @@ function reveal() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Hi, I'm Amr Ashraf - <br> Data Scientist";
+  const text = "Hi, I'm Amr Ashraf  <br> Ai Engineer & Data Scientist";
   let i = 0;
   const speed = 70;
   const target = document.getElementById("typed-text");
@@ -283,6 +535,24 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// ── Dark / Light Mode Toggle ──
+(function() {
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  if (stored) {
+    html.setAttribute('data-theme', stored);
+  }
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+})();
 
 
 </script>
