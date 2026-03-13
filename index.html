@@ -1,568 +1,570 @@
-﻿<!DOCTYPE html>
-<html data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-name" content="godocs" />
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3MR</title>
+    <meta name="description"
+        content="Portfolio of an AI Engineer & Data Scientist specializing in machine learning, data analysis, and predictive modeling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header class="sticky-top navigation">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand" href="index.html"><h3 class="amrLogo" style="color: var(--text-primary) !important;">3MR</h3></a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="ti-align-right h4" style="color: var(--text-secondary);"></i></button>
-      <div class="collapse navbar-collapse text-center" id="navigation">
-        <ul class="navbar-nav mx-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-        </ul>
-        <a href="cv/Amr-Ashraf CV.pdf" class="btn btn-sm btn-outline-primary ml-lg-4">My CV</a>
-        <a href="contact.html" class="btn btn-sm btn-primary ml-lg-4">Contact</a>
-        <button class="theme-toggle ml-lg-3" id="themeToggle" aria-label="Toggle theme">
-          <i class="ti-shine"></i><i class="ti-na"></i>
-        </button>
-      </div>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo"><span>3MR</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="cv/CV (1).pdf" target="_blank" class="btn-cv-nav">
+                <i class="fa-solid fa-file-arrow-down"></i> CV
+            </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
-  </div>
-</header>
 
-<section class="section pb-0">
-  <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-lg-7 text-center text-lg-left">
-        <h1 class="mb-4 hero-title" style="color: var(--text-primary);">
-          <span id="typed-text" class="typing"></span>
-        </h1>
-        <div class="search-wrapper">
-          <input id="search-by" name="s" type="text" class="form-control form-control-lg"
-            placeholder="Send me a message ..." readonly>
-          <a href="contact.html" class="btn btn-primary">Send</a>
+    <section id="home" class="hero">
+        <div class="hero-content hidden">
+            <h2 class="greeting">Hi, I'm <span class="neon-text">Amr Ashraf</span></h2>
+            <h1 class="typewrite-wrap">
+                <span class="typewrite" data-period="2000"
+                    data-type='[ "AI Engineer", "Machine Learning Developer", "Data Scientist", "ML & Data Analytics Specialist" ]'></span>
+            </h1>
+            <p class="hero-desc">Building scalable AI systems and developing intelligent data-driven applications.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4 d-lg-block d-none about-img" style="border-radius: 50%;">
-        <img src="images/WhatsApp Image 2025-08-30 at 9.58.40 PM.jpeg" style="border-radius: 50%; object-fit: cover;" alt="illustration" class="img-fluid">
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section reveal mt-5">
-  <div class="container">
-    <h2 class="section-title" style="color: var(--text-heading);">About Me</h2>
-    <div class="row align-items-center">
-      
-      <div class="col-md-7">
-        <div class="about-text">
-          <p class="about-greeting">Hi, I'm</p>
-          <h3>Amr Ashraf</h3>
-          <p class="about-role">AI Engineer & Data Scientist</p>
-          <p class="about-intro">I design intelligent systems that turn complex data into real-world impact.</p>
-
-          <ul class="about-highlights">
-            <li>
-              <i class="ti-settings"></i>
-              <span>Building end-to-end <strong>ML &amp; Deep Learning pipelines</strong> &#x2014; from data wrangling to production deployment.</span>
-            </li>
-            <li>
-              <i class="ti-pencil-alt"></i>
-              <span>Skilled in <strong>Python, SQL, TensorFlow &amp; Scikit-Learn</strong> with expertise in NLP, Computer Vision &amp; Predictive Analytics.</span>
-            </li>
-            <li>
-              <i class="ti-loop"></i>
-              <span>Leveraging <strong>MLOps</strong> (MLflow, DVC, Experiment Tracking) for reproducible, production-ready AI solutions.</span>
-            </li>
-          </ul>
-
-          <div class="about-edu-box">
-            <i class="ti-bookmark-alt"></i>
-            <div>
-              <strong>B.Sc. Computer Science &amp; Statistics</strong>
-              <span>Helwan University &ensp;|&ensp; CGPA: 3.733 &ensp;|&ensp; 2023 &#x2013; 2027</span>
+        <div class="hero-image hidden">
+            <div class="image-wrapper glow-frame">
+                <img src="images/profile.jpeg" alt="AI Engineer Profile"
+                    onerror="this.src='https://via.placeholder.com/400x400/0f172a/00F5FF?text=Profile+Image'">
+                <div class="floating-badge badge-1"><i class="fa-solid fa-code"></i></div>
+                <div class="floating-badge badge-2"><i class="fa-solid fa-brain"></i></div>
             </div>
-          </div>
-
-          <a href="#projects" class="btn btn-primary mt-4">View My Projects</a>
         </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section id="objective" class="objective-section hidden">
+        <div class="container">
+            <div class="objective-card glassmorphism tilt-card">
+                <i class="fa-solid fa-rocket objective-icon"></i>
+                <h3 class="gradient-text">Career Vision</h3>
+                <p>Building scalable AI systems, developing intelligent data-driven applications, and advancing machine
+                    learning solutions that solve real-world problems with high impact and precision.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="section pb-0 reveal skills" id="skills">
-  <div class="container">
-    <h2 class="section-title text-center mb-2" style="color: var(--text-heading);">My Skills</h2>
-    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Technologies and competencies I bring to every project</p>
-
-    <!-- Technical Skills -->
-    <h3 class="text-uppercase mb-4" style="color: var(--text-secondary); border-left: 5px solid #00d4ff; padding-left: 12px; font-size: 1.1rem; letter-spacing: 2px;">
-      Technical Skills
-    </h3>
-    <div class="row mb-5">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card h-100 shadow-sm border-0">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap mb-3">
-              <i class="ti-panel" style="font-size: 1.6rem; color:#00d4ff;"></i>
-            </div>
-            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">Programming & Databases</h4>
-            <div class="skill-tags">
-              <span class="badge-skill">Python</span>
-              <span class="badge-skill">SQL</span>
-              <span class="badge-skill">Shell Scripting</span>
-              <span class="badge-skill">REST APIs</span>
-              <span class="badge-skill">Git & GitHub</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card h-100 shadow-sm border-0">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap mb-3">
-              <i class="ti-stats-up" style="font-size: 1.6rem; color:#00d4ff;"></i>
-            </div>
-            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">AI & Machine Learning</h4>
-            <div class="skill-tags">
-              <span class="badge-skill">Deep Learning</span>
-              <span class="badge-skill">NLP</span>
-              <span class="badge-skill">Computer Vision</span>
-              <span class="badge-skill">Time Series</span>
-              <span class="badge-skill">Feature Engineering</span>
-              <span class="badge-skill">Model Optimization</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card h-100 shadow-sm border-0">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap mb-3">
-              <i class="ti-package" style="font-size: 1.6rem; color:#00d4ff;"></i>
-            </div>
-            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">Frameworks & Libraries</h4>
-            <div class="skill-tags">
-              <span class="badge-skill">TensorFlow</span>
-              <span class="badge-skill">PyTorch</span>
-              <span class="badge-skill">Scikit-Learn</span>
-              <span class="badge-skill">LangChain</span>
-              <span class="badge-skill">Pandas</span>
-              <span class="badge-skill">Streamlit</span>
-              <span class="badge-skill">OpenCV</span>
-              <span class="badge-skill">LightGBM</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card h-100 shadow-sm border-0">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap mb-3">
-              <i class="ti-loop" style="font-size: 1.6rem; color:#00d4ff;"></i>
-            </div>
-            <h4 class="card-title h6 mb-3" style="color: var(--text-heading); font-weight: 700;">MLOps & Deployment</h4>
-            <div class="skill-tags">
-              <span class="badge-skill">MLflow</span>
-              <span class="badge-skill">DVC</span>
-              <span class="badge-skill">Docker</span>
-              <span class="badge-skill">CI/CD</span>
-              <span class="badge-skill">Model Monitoring</span>
-              <span class="badge-skill">Experiment Tracking</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <h3 class="text-uppercase mb-4" style="color: var(--text-secondary); border-left: 5px solid #a855f7; padding-left: 12px; font-size: 1.1rem; letter-spacing: 2px;">
-      Soft Skills
-    </h3>
-    <div class="row">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap-blue mb-3">
-              <i class="ti-light-bulb" style="font-size: 1.6rem; color:#a855f7;"></i>
-            </div>
-            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Analytical Thinking</h4>
-            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Systematic problem decomposition and data-driven reasoning — 60+ HackerRank challenges solved.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap-blue mb-3">
-              <i class="ti-comments" style="font-size: 1.6rem; color:#a855f7;"></i>
-            </div>
-            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Technical Communication</h4>
-            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Translating complex AI/ML concepts into clear insights for technical and non-technical stakeholders.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap-blue mb-3">
-              <i class="ti-user" style="font-size: 1.6rem; color:#a855f7;"></i>
-            </div>
-            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Cross-Functional Collaboration</h4>
-            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Working alongside developers, analysts, and domain experts in agile, project-driven environments.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card skill-card-blue h-100 shadow-sm border-0 cardorange">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <div class="skill-icon-wrap-blue mb-3">
-              <i class="ti-timer" style="font-size: 1.6rem; color:#a855f7;"></i>
-            </div>
-            <h4 class="card-title h6 mb-2" style="color: var(--text-heading); font-weight: 700;">Self-Driven & Adaptable</h4>
-            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">Fast learner who independently researches emerging AI tools, frameworks, and best practices.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="projects" class="section pb-0 reveal">
-  <div class="container">
-    <h2 class="section-title" style="color: var(--text-heading);">Projects</h2>
-    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Hands-on work showcasing real-world AI & engineering solutions</p>
-    <div class="row">
-      
-      <!-- Project 1: Store Sales Forecasting -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card h-100">
-          <div class="project-img">
-            <img src="images/pr2.jpg" alt="Store Sales Forecasting">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Store Sales – Time Series Forecasting</h4>
-            <p class="project-text">End-to-end grocery sales forecasting for Corporación Favorita (Kaggle). Built preprocessing pipelines, multi-model system (Prophet, ARIMA, LightGBM), Streamlit dashboards, and MLOps with DVC & MLflow.</p>
-            <div class="project-tags mb-3">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Pandas</span>
-              <span class="project-tag">DVC</span>
-              <span class="project-tag">MLflow</span>
-            </div>
-            <a href="https://github.com/Amr2272/Final-Project" class="btn btn-sm project-btn">View on GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2: Cairo Real Estate Pricing -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card h-100">
-          <div class="project-img">
-            <img src="images/7136281-528e5o.jpg" alt="Cairo Real Estate Pricing">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Cairo Real Estate Pricing</h4>
-            <p class="project-text">Streamlit app to predict real estate prices in Cairo. Performed EDA and feature engineering on housing data; applied gradient boosting for accurate price estimation.</p>
-            <div class="project-tags mb-3">
-              <span class="project-tag">Streamlit</span>
-              <span class="project-tag">Scikit-Learn</span>
-              <span class="project-tag">Gradient Boosting</span>
-            </div>
-            <a href="https://github.com/Amr2272/Cairo-Real-Estate-Pricing" class="btn btn-sm project-btn">View on GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3: Tiny Debian Live -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card h-100">
-          <div class="project-img">
-            <img src="images/powered_by_linux_classic_round_sticker.jpg" alt="Tiny Debian Live">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Tiny Debian Live – Mini Linux OS</h4>
-            <p class="project-text">Lightweight, live-boot Linux distribution based on Debian 12 with XFCE desktop, persistence, and network support.</p>
-            <div class="project-tags mb-3">
-              <span class="project-tag">Shell Scripting</span>
-              <span class="project-tag">Linux Kernel</span>
-              <span class="project-tag">System Programming</span>
-            </div>
-            <a href="https://github.com/Amr2272/Mini-Linux-OS" class="btn btn-sm project-btn">View on GitHub</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-  
-<!-- Experience Section -->
-<section id="experience" class="section pb-0 reveal">
-  <div class="container">
-    <h2 class="section-title" style="color: var(--text-heading);">Experience</h2>
-    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Professional journey and key contributions</p>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-
-        <!-- Timeline -->
-        <div class="exp-timeline">
-          <div class="exp-timeline-item">
-            <div class="exp-timeline-dot"></div>
-            <div class="exp-timeline-content">
-              <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
-                <div>
-                  <h4 class="mb-0" style="color: var(--text-heading); font-size: 1.25rem;">AI Engineer & Data Scientist Intern</h4>
-                  <p class="mb-0" style="color: #00d4ff; font-weight: 600;">Digital Egypt Pioneers Initiative (DEPI)</p>
-                  <p class="mb-0" style="color: var(--text-muted); font-size: 0.9rem;">Cairo, Egypt</p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title hidden">About <span class="neon-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-img hidden">
+                    <div class="robot-scene glow-frame" id="robot-scene">
+                        <div class="robot" id="css-robot">
+                            <div class="robot-antenna">
+                                <div class="antenna-ball"></div>
+                                <div class="antenna-stem"></div>
+                            </div>
+                            <div class="robot-head" id="robot-head">
+                                <div class="robot-face">
+                                    <div class="robot-eye left-eye" id="left-eye">
+                                        <div class="eye-pupil" id="left-pupil"></div>
+                                        <div class="eye-shine"></div>
+                                    </div>
+                                    <div class="robot-eye right-eye" id="right-eye">
+                                        <div class="eye-pupil" id="right-pupil"></div>
+                                        <div class="eye-shine"></div>
+                                    </div>
+                                </div>
+                                <div class="robot-mouth">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="head-panel">
+                                    <div class="panel-light l1"></div>
+                                    <div class="panel-light l2"></div>
+                                    <div class="panel-light l3"></div>
+                                </div>
+                            </div>
+                            <div class="robot-neck"></div>
+                            <div class="robot-body">
+                                <div class="chest-panel">
+                                    <div class="chest-core"></div>
+                                    <div class="chest-grid">
+                                        <div class="grid-light"></div>
+                                        <div class="grid-light"></div>
+                                        <div class="grid-light"></div>
+                                        <div class="grid-light"></div>
+                                    </div>
+                                </div>
+                                <div class="robot-arm left-arm">
+                                    <div class="arm-upper"></div>
+                                    <div class="arm-joint"></div>
+                                    <div class="arm-lower"></div>
+                                    <div class="robot-hand">
+                                        <div class="finger"></div>
+                                        <div class="finger"></div>
+                                        <div class="finger"></div>
+                                    </div>
+                                </div>
+                                <div class="robot-arm right-arm">
+                                    <div class="arm-upper"></div>
+                                    <div class="arm-joint"></div>
+                                    <div class="arm-lower"></div>
+                                    <div class="robot-hand">
+                                        <div class="finger"></div>
+                                        <div class="finger"></div>
+                                        <div class="finger"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="robot-waist"></div>
+                            <div class="robot-legs">
+                                <div class="robot-leg left-leg">
+                                    <div class="leg-upper"></div>
+                                    <div class="leg-joint"></div>
+                                    <div class="leg-lower"></div>
+                                    <div class="robot-foot"></div>
+                                </div>
+                                <div class="robot-leg right-leg">
+                                    <div class="leg-upper"></div>
+                                    <div class="leg-joint"></div>
+                                    <div class="leg-lower"></div>
+                                    <div class="robot-foot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="robot-particle rp1"></div>
+                        <div class="robot-particle rp2"></div>
+                        <div class="robot-particle rp3"></div>
+                        <div class="robot-particle rp4"></div>
+                        <div class="robot-particle rp5"></div>
+                        <div class="robot-platform"></div>
+                    </div>
                 </div>
-                <span class="exp-date-badge">Jun 2025 – Dec 2025</span>
-              </div>
-              <hr style="border-color: var(--border-subtle); margin: 12px 0;">
-              <ul class="exp-list">
-                <li>
-                  <strong>End-to-End ML Pipelines</strong> — Designed and deployed full pipelines from data ingestion, feature engineering, model training and evaluation, to production-grade deployment.
-                </li>
-                <li>
-                  <strong>Data Engineering</strong> — Engineered automated ETL workflows in Python & SQL, improving data reliability and reducing manual preparation time across multiple project datasets.
-                </li>
-                <li>
-                  <strong>Analytical Dashboards</strong> — Built interactive dashboards with Streamlit and Matplotlib/Seaborn, enabling stakeholders to explore KPIs and drive data-driven decisions.
-                </li>
-                <li>
-                  <strong>Model Development</strong> — Developed and fine-tuned supervised & unsupervised models (LightGBM, Prophet, Scikit-Learn) for forecasting, classification, and clustering tasks.
-                </li>
-                <li>
-                  <strong>MLOps & Reproducibility</strong> — Implemented experiment tracking, model versioning, and reproducible research workflows using MLflow and DVC.
-                </li>
-                <li>
-                  <strong>Agile Collaboration</strong> — Contributed to code reviews, sprint planning, and technical documentation within a cross-functional team of engineers and analysts.
-                </li>
-              </ul>
-              <div class="exp-tech-tags mt-3">
-                <span class="exp-tag">Python</span>
-                <span class="exp-tag">SQL</span>
-                <span class="exp-tag">TensorFlow</span>
-                <span class="exp-tag">Scikit-Learn</span>
-                <span class="exp-tag">LightGBM</span>
-                <span class="exp-tag">Streamlit</span>
-                <span class="exp-tag">MLflow</span>
-                <span class="exp-tag">DVC</span>
-              </div>
+                <div class="about-text-content hidden">
+                    <h3>Empowering Data with <span class="gradient-text">Machine Learning</span></h3>
+                    <p>I am a highly motivated AI Engineer and Data Scientist specializing in end-to-end machine
+                        learning engineering. My expertise lies in designing scalable predictive models, conducting deep
+                        data analysis, and building intelligent architectures.</p>
+                    <p>With a strong technical stack spanning Python, TensorFlow, and advanced analytics tools, I thrive
+                        on a problem-solving mindset. I transform raw data into actionable insights and deploy robust
+                        MLOps pipelines to ensure systems remain reliable in production.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years of Focus</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Lines of Code</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <!-- /Timeline -->
+    </section>
 
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title hidden">Technical <span class="neon-text">Arsenal</span></h2>
+            <div class="skills-grid">
 
-<!-- Certificates Section -->
-<section id="certificates" class="section pb-0 reveal">
-  <div class="container">
-    <h2 class="section-title" style="color: var(--text-heading);">Certificates</h2>
-    <p class="text-center mb-5" style="color: var(--text-muted); font-size: 1rem;">Professional certifications and completed programs</p>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card cert-card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="cert-icon-wrap mx-auto mb-3">
-              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-terminal neon-icon"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Python</li>
+                        <li><span class="skill-dot"></span>SQL</li>
+                        <li><span class="skill-dot"></span>Shell Scripting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-network-wired neon-icon"></i>
+                        <h3>ML & Data Science</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Machine Learning</li>
+                        <li><span class="skill-dot"></span>Deep Learning</li>
+                        <li><span class="skill-dot"></span>Time Series Analysis</li>
+                        <li><span class="skill-dot"></span>Feature Engineering</li>
+                        <li><span class="skill-dot"></span>EDA</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-cubes neon-icon"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>TensorFlow</li>
+                        <li><span class="skill-dot"></span>Scikit-Learn</li>
+                        <li><span class="skill-dot"></span>Pandas & NumPy</li>
+                        <li><span class="skill-dot"></span>Matplotlib & Seaborn</li>
+                        <li><span class="skill-dot"></span>Prophet & LightGBM</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-sliders neon-icon"></i>
+                        <h3>MLOps & Tools</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>MLflow</li>
+                        <li><span class="skill-dot"></span>DVC</li>
+                        <li><span class="skill-dot"></span>Git & GitHub</li>
+                        <li><span class="skill-dot"></span>Streamlit</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-chart-pie neon-icon"></i>
+                        <h3>Other Tech Skills</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Linux</li>
+                        <li><span class="skill-dot"></span>Data Visualization</li>
+                        <li><span class="skill-dot"></span>Dashboards</li>
+                        <li><span class="skill-dot"></span>Big Data Concepts</li>
+                    </ul>
+                </div>
+
             </div>
-            <h5 style="color: var(--text-heading);">Machine Learning with Python</h5>
-            <p class="cert-issuer">IBM – Coursera</p>
-            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Supervised & unsupervised learning, regression, classification, and clustering using Scikit-Learn, SciPy, and NumPy.</p>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card cert-card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="cert-icon-wrap mx-auto mb-3">
-              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title hidden">Featured <span class="neon-text">Projects</span></h2>
+            <div class="project-grid">
+
+                <div class="project-card glassmorphism tilt-card hidden">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1577538928305-3807c3993047?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Machine Learning Project">
+                        <div class="overlay">
+                            <a href="https://github.com/Amr2272/Store-Sales-Time-Series-Forecasting.git" target="_blank"
+                                class="btn-link"><i class="fa-brands fa-github"></i> Code</a>
+                            <!-- <a href="#" class="btn-link"><i class="fa-solid fa-external-link-alt"></i> Live</a> -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Store Sales – Time Series Forecasting</h3>
+                        <p>End-to-end grocery sales forecasting for Corporación Favorita (Kaggle). Built preprocessing
+                            pipelines, multi-model system (Prophet, ARIMA, LightGBM), Streamlit dashboards, and MLOps
+                            with DVC & MLflow.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>DVC</span>
+                            <span>MLflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glassmorphism tilt-card hidden">
+                    <div class="project-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1720169790514-4b89c42faa1a?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Time Series Forecasting">
+                        <div class="overlay">
+                            <a href="https://github.com/Amr2272/Cairo-Real-Estate-Pricing.git" target="_blank"
+                                class="btn-link"><i class="fa-brands fa-github"></i> Code</a>
+                            <!-- <a href="#" class="btn-link"><i class="fa-solid fa-external-link-alt"></i> Live</a> -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cairo Real Estate Pricing</h3>
+                        <p>Streamlit app to predict real estate prices in Cairo. Performed EDA and feature engineering
+                            on housing data; applied gradient boosting for accurate price estimation.</p>
+                        <div class="tags">
+                            <span>Streamlit</span>
+                            <span>scikit-learn</span>
+                            <span>Gradient Boosting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glassmorphism tilt-card hidden">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1640552435388-a54879e72b28?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Data Science App">
+                        <div class="overlay">
+                            <a href="https://github.com/Amr2272/Mini-Linux-OS.git" target="_blank" class="btn-link"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <!-- <a href="#" class="btn-link"><i class="fa-solid fa-external-link-alt"></i> Live</a> -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tiny Debian Live – Mini Linux OS</h3>
+                        <p>A full-stack data application allowing end users to upload datasets, perform dynamic EDA, and
+                            train regression models on the fly.</p>
+                        <div class="tags">
+                            <span>Streamlit</span>
+                            <span>Matplotlib</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-            <h5 style="color: var(--text-heading);">Certified Data Scientist</h5>
-            <p class="cert-issuer">DEPI</p>
-            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Intensive training covering data analysis, Python, SQL, and machine learning with hands-on real-world projects.</p>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card cert-card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="cert-icon-wrap mx-auto mb-3">
-              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title hidden">Professional <span class="neon-text">Journey</span></h2>
+            <div class="timeline">
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">Data Scientist Intern</h3>
+                        <h4 class="company">Digital Egypt Pioneers Initiative (DEPI)</h4>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> Recent</span>
+                        <ul>
+                            <li>Led extensive Exploratory Data Analysis (EDA) to uncover actionable insights.</li>
+                            <li>Engineered advanced predictive modeling workflows for real-time inference.</li>
+                            <li>Developed comprehensive data visualization dashboards to communicate trends to
+                                stakeholders.</li>
+                            <li>Participated in core machine learning operations to enhance model accuracy.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <h5 style="color: var(--text-heading);">Python Programming Basics</h5>
-            <p class="cert-issuer">Mahara Tech</p>
-            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Python fundamentals including data types, control flow, functions, and basic problem-solving.</p>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card cert-card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="cert-icon-wrap mx-auto mb-3">
-              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+    </section>
+
+    <section id="certificates" class="experience-section">
+        <div class="container">
+            <h2 class="section-title hidden">My <span class="neon-text">Certificates</span></h2>
+            <div class="timeline">
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">Machine Learning with Python</h3>
+                        <h4 class="company">IBM, Coursera</h4>
+                        <ul>
+                            <li>Completed IBM's professional certificate covering supervised and unsupervised learning,
+                                regression, classification, and clustering.</li>
+                            <li>Applied machine learning algorithms using Python libraries including Scikit-Learn,
+                                SciPy, and NumPy on real-world datasets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">Certified Data Scientist</h3>
+                        <h4 class="company">DEPI</h4>
+                        <ul>
+                            <li>Completed an intensive training program covering data analysis, Python, SQL, and machine
+                                learning fundamentals.</li>
+                            <li>Gained hands-on experience through real-world data science projects and practical case
+                                studies.</li>
+                            <li>Developed skills in data cleaning, exploratory data analysis (EDA), and data
+                                visualization.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">Python Programming Basics</h3>
+                        <h4 class="company">Mahara Tech</h4>
+                        <ul>
+                            <li>Covered Python fundamentals including data types, control flow, functions, and basic
+                                problem-solving.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">SQL Certificate</h3>
+                        <h4 class="company">HackerRank</h4>
+                        <ul>
+                            <li>Gained practical experience in writing SQL queries, data retrieval, filtering,
+                                aggregation, and joins.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">Python (Basic)</h3>
+                        <h4 class="company">HackerRank</h4>
+                        <ul>
+                            <li>Validated core Python proficiency through timed algorithmic challenges, demonstrating
+                                logic and syntax mastery.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <h5 style="color: var(--text-heading);">SQL Certificate</h5>
-            <p class="cert-issuer">HackerRank</p>
-            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Practical experience in SQL queries, data retrieval, filtering, aggregation, and joins.</p>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card cert-card h-100 shadow-sm border-0">
-          <div class="card-body text-center">
-            <div class="cert-icon-wrap mx-auto mb-3">
-              <i class="ti-medall" style="font-size: 1.6rem; color:#00d4ff;"></i>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title hidden">Core <span class="neon-text">Capabilities</span></h2>
+            <div class="services-grid">
+
+                <div class="service-card glassmorphism tilt-card hidden">
+                    <i class="fa-solid fa-robot service-icon"></i>
+                    <h3>AI & Machine Learning Solutions</h3>
+                    <p>Designing sophisticated ML algorithms from scratch to automate processes, recognize patterns, and
+                        optimize business decisions.</p>
+                </div>
+
+                <div class="service-card glassmorphism tilt-card hidden">
+                    <i class="fa-solid fa-chart-line service-icon"></i>
+                    <h3>Data Science & Predictive Analytics</h3>
+                    <p>Using statistical techniques and big data to analyze historical inputs and forecast future trends
+                        accurately.</p>
+                </div>
+
+                <div class="service-card glassmorphism tilt-card hidden">
+                    <i class="fa-solid fa-chart-area service-icon"></i>
+                    <h3>Data Visualization & Dashboards</h3>
+                    <p>Transforming complex datasets into intuitive, interactive dashboards that empower non-technical
+                        users to grasp insights instantly.</p>
+                </div>
+
+                <div class="service-card glassmorphism tilt-card hidden">
+                    <i class="fa-solid fa-server service-icon"></i>
+                    <h3>MLOps & Model Deployment</h3>
+                    <p>Building production-ready pipelines that robustly train, version, test, and serve machine
+                        learning models at scale.</p>
+                </div>
+
+                <div class="service-card glassmorphism tilt-card hidden">
+                    <i class="fa-solid fa-lightbulb service-icon"></i>
+                    <h3>AI Consulting & Data Strategy</h3>
+                    <p>Providing expert guidance on leveraging data capabilities, defining metrics, and adopting modern
+                        AI architectures.</p>
+                </div>
+
             </div>
-            <h5 style="color: var(--text-heading);">Python (Basic)</h5>
-            <p class="cert-issuer">HackerRank</p>
-            <p class="card-text" style="color: var(--text-muted); font-size: 0.88rem;">Validated core Python proficiency through timed algorithmic challenges.</p>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section reveal cta-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 text-center d-lg-block d-none">
-        <img src="images/12982910_5124556.jpg" class="img-fluid" style="border-radius: 10px;" alt="">
-      </div>
-      <div class="col-lg-8 text-lg-left text-center">
-        <h2 class="mb-3">Let's Build Something Together!</h2>
-        <p>If you have a project idea, internship, or collaboration in mind, feel free to reach out. I'm always excited to connect and explore new opportunities.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Me</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title hidden">Let's <span class="neon-text">Connect</span></h2>
+            <div class="contact-layout">
 
-<footer>
-  <div class="container">
-    <div class="row align-items-center border-bottom py-5">
-      <div class="col-lg-4">
-        <ul class="list-inline footer-menu text-center text-lg-left">
-          <li class="list-inline-item"><a href="https://www.linkedin.com/in/amr-ashraf-/">LinkedIn</a></li>
-          <li class="list-inline-item"><a href="https://github.com/Amr2272">GitHub</a></li>
-          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 text-center mb-4 mb-lg-0">
-        <a class="navbar-brand" href="index.html">
-          <h3 class="amrLogo2" style="color: var(--text-primary);">3MR</h3>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <ul class="list-inline social-icons text-lg-right text-center">
-          <li class="list-inline-item"><a href="mailto:amrashraf.official@gmail.com"><i class="ti-email"></i></a></li>
-          <li class="list-inline-item"><a href="https://github.com/Amr2272"><i class="ti-github"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.linkedin.com/in/amr-ashraf-/"><i class="ti-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="py-4 text-center">
-      <small class="text-light">© 2025 3MR. All rights reserved.</small>
-    </div>
-  </div>
-</footer>
+                <div class="contact-info hidden">
+                    <h3>Get In Touch</h3>
+                    <p>Interested in collaborating or have a project in mind? Let's talk about how AI can solve your
+                        critical challenges.</p>
 
-<script>
-window.addEventListener("scroll", reveal);
+                    <div class="contact-methods">
+                        <a href="mailto:amrashraf.official@gmail.com" class="contact-method glassmorphism">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>amrashraf.official@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/amr-ashraf-" target="_blank"
+                            class="contact-method glassmorphism">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>https://www.linkedin.com/in/amr-ashraf-/</span>
+                        </a>
+                        <a href="https://github.com/Amr2272" target="_blank" class="contact-method glassmorphism">
+                            <i class="fa-brands fa-github"></i>
+                            <span>https://github.com/Amr2272</span>
+                        </a>
+                    </div>
 
-function reveal() {
-  let reveals = document.querySelectorAll(".reveal");
-  for (let i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 150;
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
+                    <div class="social-links">
+                        <a href="https://wa.me/01096265802?text=Hello%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20please%20provide%20more%20information%20about%20your%20services?"
+                            class="social-icon" aria-label="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
 
-document.addEventListener("DOMContentLoaded", function () {
-  const text = "Hi, I'm Amr Ashraf  <br> Ai Engineer & Data Scientist";
-  let i = 0;
-  const speed = 70;
-  const target = document.getElementById("typed-text");
+                <div class="contact-form-container hidden">
+                    <form action="https://formsubmit.co/amrashraf.official@gmail.com" method="POST"
+                        class="contact-form glassmorphism">
+                        <input type="hidden" name="_subject" value="New submission from your Portfolio!">
+                        <input type="hidden" name="_template" value="table">
 
-  function typeWriter() {
-    if (i < text.length) {
-      if (text.substring(i, i+4) === "<br>") {
-        target.innerHTML += "<br>";
-        i += 4;
-      } else {
-        target.innerHTML += text.charAt(i);
-        i++;
-      }
-      setTimeout(typeWriter, speed);
-    }
-  }
-  typeWriter();
-});
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
 
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach((section) => {
-    const windowHeight = window.innerHeight;
-    const revealTop = section.getBoundingClientRect().top;
-    const revealPoint = 100;
+            </div>
+        </div>
+    </section>
 
-    if (revealTop < windowHeight - revealPoint) {
-      section.classList.add("active");
-    }
-  });
-});
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo"><span>3MR</span></div>
+            <p class="copyright">Copyright &copy; <span id="current-year"></span> 3MR. All Rights Reserved.</p>
+            <a href="#home" class="scroll-top" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
 
-// ── Dark / Light Mode Toggle ──
-(function() {
-  const toggle = document.getElementById('themeToggle');
-  const html = document.documentElement;
-  const stored = localStorage.getItem('theme');
-  if (stored) {
-    html.setAttribute('data-theme', stored);
-  }
-  if (toggle) {
-    toggle.addEventListener('click', function() {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-  }
-})();
-
-
-</script>
-
-
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+    <script src="js/script.js"></script>
 </body>
+
 </html>
