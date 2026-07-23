@@ -163,13 +163,16 @@
                     </div>
                 </div>
                 <div class="about-text-content hidden">
-                    <h3>Empowering Data with <span class="gradient-text">Machine Learning</span></h3>
+                    <h3>Empowering Data with Intelligent Systems <span class="gradient-text">Machine Learning</span>
+                    </h3>
                     <p>I am a highly motivated AI Engineer and Data Scientist specializing in end-to-end machine
-                        learning engineering. My expertise lies in designing scalable predictive models, conducting deep
-                        data analysis, and building intelligent architectures.</p>
-                    <p>With a strong technical stack spanning Python, TensorFlow, and advanced analytics tools, I thrive
-                        on a problem-solving mindset. I transform raw data into actionable insights and deploy robust
-                        MLOps pipelines to ensure systems remain reliable in production.</p>
+                        learning engineering and autonomous AI agent development. My expertise lies in designing
+                        scalable predictive models, conducting deep data analysis, and building intelligent
+                        architectures — from traditional ML pipelines to LLM-powered, multi-agent systems.</p>
+                    <p>With a strong technical stack spanning Python, TensorFlow, LangChain, and advanced analytics
+                        tools, I thrive on a problem-solving mindset. I transform raw data into actionable insights,
+                        design conversational agents backed by RAG and vector databases, and deploy robust MLOps
+                        pipelines to ensure systems remain reliable in production.</p>
                     <div class="about-stats">
                         <div class="stat-box">
                             <span class="stat-number">3+</span>
@@ -193,6 +196,38 @@
         <div class="container">
             <h2 class="section-title hidden">Technical <span class="neon-text">Arsenal</span></h2>
             <div class="skills-grid">
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-brain neon-icon"></i>
+                        <h3>AI Agents & LLMs</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>LangChain (Chains & Tools)</li>
+                        <li><span class="skill-dot"></span>Retrieval-Augmented Generation (RAG)</li>
+                        <li><span class="skill-dot"></span>Prompt Engineering</li>
+                        <li><span class="skill-dot"></span>Memory & Context Handling</li>
+                        <li><span class="skill-dot"></span>Multi-Agent Collaboration</li>
+                        <li><span class="skill-dot"></span>LLM APIs (Groq, HuggingFace)</li>
+                        <li><span class="skill-dot"></span>Vector Databases (FAISS)</li>
+                        <li><span class="skill-dot"></span>Conversational AI Agents</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glassmorphism tilt-card hidden">
+                    <div class="category-header">
+                        <i class="fa-solid fa-compass neon-icon"></i>
+                        <h3>Agent Deployment & Automation</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Web Interface Development for Agents</li>
+                        <li><span class="skill-dot"></span>Workflow Automation</li>
+                        <li><span class="skill-dot"></span>Agent-to-API Integration</li>
+                        <li><span class="skill-dot"></span>Agent Evaluation & Debugging</li>
+                        <li><span class="skill-dot"></span>Performance Optimization</li>
+                        <li><span class="skill-dot"></span>Agent Deployment</li>
+                    </ul>
+                </div>
 
                 <div class="skill-category glassmorphism tilt-card hidden">
                     <div class="category-header">
@@ -317,26 +352,49 @@
 
                 <div class="project-card glassmorphism tilt-card hidden">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1640552435388-a54879e72b28?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Data Science App">
+                        <img src="images/ai_medical_assistant.png"
+                            alt="AI Medical Assistant">
                         <div class="overlay">
-                            <a href="https://github.com/Amr2272/Mini-Linux-OS.git" target="_blank" class="btn-link"><i
-                                    class="fa-brands fa-github"></i> Code</a>
-                            <!-- <a href="#" class="btn-link"><i class="fa-solid fa-external-link-alt"></i> Live</a> -->
+                            <a href="https://github.com/Amr2272/Ai-Medical-Assistant" target="_blank"
+                                class="btn-link"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Tiny Debian Live – Mini Linux OS</h3>
-                        <p>A full-stack data application allowing end users to upload datasets, perform dynamic EDA, and
-                            train regression models on the fly.</p>
+                        <h3>AI Medical Assistant</h3>
+                        <p>AI-powered medical assistant leveraging RAG, Groq LLM, FAISS, and FastAPI with multi-session
+                            management to answer medical queries from knowledge bases.</p>
                         <div class="tags">
-                            <span>Streamlit</span>
-                            <span>Matplotlib</span>
-                            <span>Machine Learning</span>
+                            <span>FastAPI</span>
+                            <span>LangChain</span>
+                            <span>RAG</span>
+                            <span>Groq API</span>
+                            <span>FAISS</span>
                         </div>
                     </div>
                 </div>
 
+                <div class="project-card glassmorphism tilt-card hidden">
+                    <div class="project-img">
+                        <img src="images/ai_research_assistant.png"
+                            alt="AI Research Assistant">
+                        <div class="overlay">
+                            <a href="https://github.com/Amr2272/Ai-Research-Assistant" target="_blank"
+                                class="btn-link"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Research Assistant</h3>
+                        <p>Multi-agent research system featuring a 5-agent sequential pipeline powered by Qwen2.5-7B on
+                            Kaggle GPU, connected to a Streamlit client via FastAPI & Ngrok.</p>
+                        <div class="tags">
+                            <span>Multi-Agent</span>
+                            <span>LangChain</span>
+                            <span>Streamlit</span>
+                            <span>FastAPI</span>
+                            <span>Qwen2.5</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -346,6 +404,27 @@
         <div class="container">
             <h2 class="section-title hidden">Professional <span class="neon-text">Journey</span></h2>
             <div class="timeline">
+
+                <div class="timeline-item hidden">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glassmorphism">
+                        <h3 class="role">AI Agent Trainee</h3>
+                        <h4 class="company">Orange Digital-Hub &bull; Dokki, Egypt</h4>
+                        <span class="date"><i class="fa-regular fa-calendar"></i> 07/2026 – 08/2026</span>
+                        <ul>
+                            <li>Completed an intensive training program on AI agents and the LLM ecosystem, covering LLM
+                                fundamentals and prompt engineering techniques.</li>
+                            <li>Built chains and tools using LangChain, and implemented memory and context handling for
+                                conversational agents.</li>
+                            <li>Integrated external knowledge sources into agent workflows and designed multi-agent
+                                collaboration systems.</li>
+                            <li>Added automation and API integrations to extend agent capabilities, and built a web
+                                interface to interact with the agents.</li>
+                            <li>Performed evaluation, debugging, and optimization of AI agents, culminating in a final
+                                presentation and deployment of the project.</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="timeline-item hidden">
                     <div class="timeline-dot"></div>
